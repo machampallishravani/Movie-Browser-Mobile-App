@@ -198,12 +198,17 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   ImageProvider _getImageProvider(MoviesModel movie) {
-    if (movie.localPosterPath != null && movie.localPosterPath!.isNotEmpty) {
-      final file = File(movie.localPosterPath!);
-      if (file.existsSync()) {
-        return FileImage(file);
+    try {
+      if (movie.localPosterPath != null && movie.localPosterPath!.isNotEmpty) {
+        final file = File(movie.localPosterPath!);
+        if (file.existsSync()) {
+          return FileImage(file);
+        }
       }
+      return NetworkImage(movie.posterURL.toString());
+    } catch (e) {
+      debugPrint('Error loading image: $e');
+      return const AssetImage('assets/logo.png');
     }
-    return NetworkImage(movie.posterURL.toString());
   }
 }
