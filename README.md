@@ -1,16 +1,18 @@
-# mymovies_app
+Movie Browser App
 
-A new Flutter project.
+Overview
+The Movie Browser App is a Flutter-based mobile application for browsing and searching movies. Users can mark their favorite movies, view details, and save movie data locally for offline use. The app fetches movie data from an external API and utilizes a SQLite database for local caching.
 
-## Getting Started
+Features
+Movie Browsing: Browse a wide selection of movies fetched from the API.
+Search Functionality: Search for movies using keywords.
+Favorites Management: Mark movies as favorites and access them later.
+Offline Support: Save movies locally for offline access.
+Dynamic UI: Grid-based layout for browsing movies.
 
-This project is a starting point for a Flutter application.
+Requirements
+Flutter SDK: >=3.3.0
+Android Device or Emulator
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Sample Test Credentials
+No authentication is required for this app.
